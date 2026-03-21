@@ -46,11 +46,9 @@
   --color-shadow: rgba(13, 21, 20, 0.25);
 
   /* --- Typography --- */
-  --font-family-heading:
-    "Playfair Display", "Georgia", "Times New Roman", serif;
+  --font-family-heading: "Playfair Display", "Georgia", "Times New Roman", serif;
   --font-family-body:
-    "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+    "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
@@ -437,11 +435,7 @@ h6 {
   bottom: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(
-    90deg,
-    var(--color-accent) 0%,
-    var(--color-primary-light) 100%
-  );
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-primary-light) 100%);
   transition: width var(--transition-base);
 }
 
@@ -451,7 +445,7 @@ h6 {
 .nav__link--toggle:hover,
 .nav__link--toggle:focus-visible,
 .nav__link--toggle.nav__link--active {
-  color: var(--color-primary);
+  color: var(--color-accent);
   outline: none;
 }
 
@@ -513,13 +507,13 @@ h6 {
 .nav__dropdown-link:hover,
 .nav__dropdown-link:focus-visible {
   background-color: var(--color-accent-soft);
-  color: var(--color-primary);
+  color: var(--color-primary-light);
   outline: none;
 }
 
 .nav__dropdown-link--active {
   font-weight: var(--font-weight-semibold);
-  color: var(--color-primary);
+  color: var(--color-accent-light);
 }
 
 /* Theme toggle */
@@ -790,16 +784,8 @@ h6 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(
-      circle at 10% 0%,
-      rgba(201, 161, 91, 0.18) 0%,
-      transparent 45%
-    ),
-    linear-gradient(
-      135deg,
-      rgba(9, 64, 61, 0.88) 0%,
-      rgba(5, 18, 16, 0.97) 100%
-    );
+    radial-gradient(circle at 10% 0%, rgba(201, 161, 91, 0.18) 0%, transparent 45%),
+    linear-gradient(135deg, rgba(9, 64, 61, 0.88) 0%, rgba(5, 18, 16, 0.97) 100%);
   opacity: 0;
   z-index: 2;
   transition: opacity var(--transition-slower);
@@ -1003,11 +989,7 @@ h6 {
    ========================================================= */
 
 .services {
-  background: linear-gradient(
-    180deg,
-    var(--color-bg-primary) 0%,
-    var(--color-bg-secondary) 100%
-  );
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
 }
 
 .services__header {
@@ -1073,11 +1055,7 @@ h6 {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(
-    90deg,
-    var(--color-accent) 0%,
-    var(--color-primary-light) 100%
-  );
+  background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-primary-light) 100%);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--transition-base);
@@ -1099,11 +1077,7 @@ h6 {
   margin-inline: auto;
   margin-bottom: var(--space-6);
   border-radius: var(--radius-xl);
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-primary-light) 100%
-  );
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
   color: var(--color-white);
   display: flex;
   align-items: center;
@@ -1280,11 +1254,7 @@ h6 {
 .contact {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary-light) 0%,
-    var(--color-bg-dark) 100%
-  );
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-bg-dark) 100%);
   color: var(--color-white);
 }
 

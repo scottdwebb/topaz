@@ -80,7 +80,7 @@
 }
 
 .service-hero .breadcrumb__current {
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-accent-light);
 }
 
 .service-hero .breadcrumb__separator {
