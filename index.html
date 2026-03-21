@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <!--
+      Topaz Administrative Solutions
+      Accessible, mobile-first, responsive landing page
+      - Serif headings (Playfair Display) + sans-serif body (Source Sans 3)
+      - Teal + gold luxury palette
+      - WCAG 2.1-aware structure
+    -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Topaz Administrative Solutions | Thinking. Solutions.</title>
+
+    <meta
+      name="description"
+      content="Topaz Administrative Solutions provides small business plans, IT consulting, and virtual assistant services to help your business succeed." />
+    <meta
+      name="keywords"
+      content="business planning, IT consulting, virtual assistant, administrative services, small business solutions" />
+    <meta name="author" content="Scott D. Webb" />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon/favicon-96x96.png"
+      sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Topaz Admin Solutions" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Topaz Administrative Solutions | Thinking. Solutions." />
+    <meta
+      property="og:description"
+      content="Premium administrative services for small businesses." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.topazadminsolutions.com" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/7a6c4a0c2b.js"
+      crossorigin="anonymous"></script>
+
+    <!-- Google Fonts: Playfair Display (serif heading) + Source Sans 3 (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ARIA live region for JS announcements -->
+    <div
+      id="announcer"
+      aria-live="polite"
+      aria-atomic="true"
+      class="sr-only"></div>
+
+    <!-- ============================================================
+         HEADER
+    ============================================================ -->
+    <header class="header" role="banner" id="header">
+      <div class="container header__container">
+        <!-- Brand -->
+        <a
+          href="index.html#home"
+          class="brand"
+          aria-label="Topaz Administrative Solutions - Home">
+          <img
+            src="assets/images/tas-logomark--120.webp"
+            alt="Topaz Logo"
+            class="brand__logomark" />
+          <div class="brand__text">
+            <img
+              src="assets/images/tas-wordmark--512.png"
+              alt="Topaz Administrative Solutions"
+              class="brand__wordmark" />
+            <span class="brand__tagline">Thinking. Solutions.</span>
+          </div>
+        </a>
+
+        <!-- Desktop menubar navigation -->
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav__list" role="menubar">
+            <li role="none">
+              <a
+                href="index.html#home"
+                class="nav__link"
+                role="menuitem"
+                data-nav-link
+                >Home</a
+              >
+            </li>
+
+            <li class="nav__item nav__item--has-dropdown" role="none">
+              <button
+                class="nav__link nav__link--toggle nav__link--services-root"
+                type="button"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="services-menu">
+                Services
+                <i
+                  class="fas fa-chevron-down nav__chevron"
+                  aria-hidden="true"></i>
+              </button>
+              <ul
+                id="services-menu"
+                class="nav__dropdown"
+                role="menu"
+                aria-label="Services submenu">
+                <li role="none">
+                  <a
+                    href="index.html#services"
+                    class="nav__dropdown-link"
+                    role="menuitem"
+                    data-nav-link>
+                    All Services Overview
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="small-bus-plan.html"
+                    class="nav__dropdown-link"
+                    role="menuitem"
+                    data-service="business-plans">
+                    Small Business Plans
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="it-consult.html"
+                    class="nav__dropdown-link"
+                    role="menuitem"
+                    data-service="it-consulting">
+                    IT Consulting
+                  </a>
+                </li>
+                <li role="none">
+                  <a
+                    href="virtual-assist.html"
+                    class="nav__dropdown-link"
+                    role="menuitem"
+                    data-service="virtual-assistant">
+                    Virtual Assistant
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li role="none">
+              <a
+                href="index.html#about"
+                class="nav__link"
+                role="menuitem"
+                data-nav-link
+                >About</a
+              >
+            </li>
+
+            <li role="none">
+              <a
+                href="index.html#contact"
+                class="nav__link"
+                role="menuitem"
+                data-nav-link
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Theme toggle + mobile trigger -->
+        <div style="display: flex; align-items: center; gap: var(--space-4)">
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode">
+            <i
+              id="themeIcon"
+              class="fas fa-moon theme-toggle__icon"
+              aria-hidden="true"></i>
+          </button>
+
+          <button
+            id="mobileMenuToggle"
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+            <span class="mobile-menu-btn__line"></span>
+            <span class="mobile-menu-btn__line"></span>
+            <span class="mobile-menu-btn__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Off-canvas mobile menu -->
+    <aside
+      class="off-canvas-menu"
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+      hidden>
+      <div class="off-canvas-menu__header">
+        <img
+          src="assets/images/tas-logomark--120.webp"
+          alt="Topaz Logo"
+          style="width: 48px; height: 48px" />
+        <button
+          class="off-canvas-menu__close"
+          type="button"
+          aria-label="Close mobile menu">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="off-canvas-menu__nav" aria-label="Mobile main navigation">
+        <ul class="off-canvas-menu__list">
+          <li>
+            <a
+              href="index.html#home"
+              class="off-canvas-menu__link"
+              data-nav-link>
+              <i class="fas fa-home" aria-hidden="true"></i>
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li class="off-canvas-menu__item off-canvas-menu__item--has-children">
+            <button
+              class="off-canvas-menu__link off-canvas-menu__link--toggle off-canvas-menu__link--services-root"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="mobile-services-menu">
+              <span>
+                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                <span>Services</span>
+              </span>
+              <i
+                class="fas fa-chevron-down off-canvas-menu__chevron"
+                aria-hidden="true"></i>
+            </button>
+            <ul
+              id="mobile-services-menu"
+              class="off-canvas-menu__sublist"
+              role="menu"
+              aria-label="Services submenu">
+              <li role="none">
+                <a
+                  href="index.html#services"
+                  class="off-canvas-menu__sublink"
+                  role="menuitem"
+                  data-nav-link
+                  >All Services Overview</a
+                >
+              </li>
+              <li role="none">
+                <a
+                  href="small-bus-plan.html"
+                  class="off-canvas-menu__sublink"
+                  role="menuitem"
+                  data-service="business-plans"
+                  >Small Business Plans</a
+                >
+              </li>
+              <li role="none">
+                <a
+                  href="it-consult.html"
+                  class="off-canvas-menu__sublink"
+                  role="menuitem"
+                  data-service="it-consulting"
+                  >IT Consulting</a
+                >
+              </li>
+              <li role="none">
+                <a
+                  href="virtual-assist.html"
+                  class="off-canvas-menu__sublink"
+                  role="menuitem"
+                  data-service="virtual-assistant"
+                  >Virtual Assistant</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a
+              href="index.html#about"
+              class="off-canvas-menu__link"
+              data-nav-link>
+              <i class="fas fa-info-circle" aria-hidden="true"></i>
+              <span>About</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="index.html#contact"
+              class="off-canvas-menu__link"
+              data-nav-link>
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span>Contact</span>
+            </a>
+          </li>
+
+          <!-- Mobile theme toggle -->
+          <li style="margin-top: auto; padding: var(--space-4)">
+            <button
+              id="themeToggleMobile"
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle dark mode"
+              style="
+                width: 100%;
+                justify-content: flex-start;
+                gap: var(--space-3);
+              ">
+              <i
+                id="themeIconMobile"
+                class="fas fa-moon theme-toggle__icon"
+                aria-hidden="true"></i>
+              <span>Toggle Theme</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Overlay for mobile menu -->
+    <div class="overlay" aria-hidden="true"></div>
+
+    <!-- ============================================================
+         MAIN CONTENT
+    ============================================================ -->
+    <main id="main-content">
+      <!-- HERO -->
+      <section id="home" class="hero" role="region" aria-label="Welcome">
+        <video
+          id="heroVideo"
+          class="hero__video"
+          autoplay
+          muted
+          playsinline
+          aria-hidden="true">
+          <source src="assets/video/hero-video.mp4" type="video/mp4" />
+        </video>
+
+        <div id="heroOverlay" class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <!-- Kicker line above the headline -->
+          <p class="hero__kicker" aria-hidden="true">
+            <span class="hero__kicker-line"></span>
+            Trusted. Experienced. Results-driven.
+          </p>
+
+          <h1 id="heroTitle" class="hero__title">Thinking.<br />Solutions.</h1>
+
+          <p id="heroSubtitle" class="hero__subtitle">
+            Empowering your business with expert administrative and strategic
+            solutions that drive measurable, lasting success.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#services" class="btn btn--primary btn--lg">
+              <span>Our Services</span>
+              <i class="fas fa-arrow-right btn__icon" aria-hidden="true"></i>
+            </a>
+            <a href="#contact" class="btn btn--outline btn--lg">
+              <span>Schedule a Consultation</span>
+              <i class="fas fa-calendar btn__icon" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section
+        id="services"
+        class="section services"
+        data-animate="fade-up"
+        role="region"
+        aria-labelledby="services-heading">
+        <div class="container">
+          <header class="services__header">
+            <p class="services__subtitle">What We Do</p>
+            <h2
+              id="services-heading"
+              class="services__title"
+              data-text="Our Services">
+              Our Services
+            </h2>
+            <p class="services__description">
+              Comprehensive business solutions tailored to your unique needs and
+              goals.
+            </p>
+          </header>
+
+          <div class="services__grid">
+            <!-- Service 1 -->
+            <article class="service-card" data-animate="fade-up">
+              <div class="service-card__icon" aria-hidden="true">
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <h3 class="service-card__title">Small Business Plans</h3>
+              <p class="service-card__description">
+                Strategic planning and comprehensive roadmaps designed to help
+                your small business grow, scale, and succeed in competitive
+                markets.
+              </p>
+              <div class="service-card__actions">
+                <a
+                  href="small-bus-plan.html"
+                  class="btn btn--secondary btn--md"
+                  data-service="business-plans">
+                  <span>Learn More</span>
+                  <i
+                    class="fas fa-arrow-right btn__icon"
+                    aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service 2 -->
+            <article class="service-card" data-animate="fade-up">
+              <div class="service-card__icon" aria-hidden="true">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3 class="service-card__title">IT Consulting</h3>
+              <p class="service-card__description">
+                Expert technology guidance and consulting services to optimize
+                your systems, improve operational efficiency, and drive digital
+                transformation.
+              </p>
+              <div class="service-card__actions">
+                <a
+                  href="it-consult.html"
+                  class="btn btn--secondary btn--md"
+                  data-service="it-consulting">
+                  <span>Learn More</span>
+                  <i
+                    class="fas fa-arrow-right btn__icon"
+                    aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service 3 -->
+            <article class="service-card" data-animate="fade-up">
+              <div class="service-card__icon" aria-hidden="true">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h3 class="service-card__title">Virtual Assistant</h3>
+              <p class="service-card__description">
+                Professional administrative support and virtual assistance to
+                handle your daily tasks, enabling you to focus on strategic
+                growth initiatives.
+              </p>
+              <div class="service-card__actions">
+                <a
+                  href="virtual-assist.html"
+                  class="btn btn--secondary btn--md"
+                  data-service="virtual-assistant">
+                  <span>Learn More</span>
+                  <i
+                    class="fas fa-arrow-right btn__icon"
+                    aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section
+        id="about"
+        class="section about"
+        data-animate="fade-up"
+        role="region"
+        aria-labelledby="about-heading">
+        <div class="container">
+          <header class="about--header">
+            <p class="about--header__subtitle">Thinking. Solutions.</p>
+            <h2
+              id="about-heading"
+              class="about--header__title"
+              data-text="About Us">
+              About Us
+            </h2>
+            <p class="about--header__description">
+              Empowering your business with expert solutions that drive success.
+            </p>
+          </header>
+
+          <div class="about__content">
+            <div class="about__text" data-animate="fade-up">
+              <h3 class="about__title">Topaz Administrative Solutions</h3>
+
+              <p class="about__description">
+                At Topaz Administrative Solutions, we believe every business
+                deserves access to premium administrative and consulting
+                services. With years of experience serving small to medium-sized
+                businesses, we provide the strategic support and operational
+                excellence needed to thrive in today's competitive landscape.
+              </p>
+
+              <p class="about__description">
+                Our team of dedicated professionals brings together expertise in
+                business planning, technology consulting, and administrative
+                management to deliver comprehensive solutions that drive real
+                results.
+              </p>
+
+              <div class="about__highlights">
+                <div class="about-highlight">
+                  <div class="about-highlight__icon">
+                    <i class="fas fa-award" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h4 class="about-highlight__title">Proven Excellence</h4>
+                    <p class="about-highlight__text">
+                      Years of experience delivering exceptional results for
+                      businesses across diverse industries.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="about-highlight">
+                  <div class="about-highlight__icon">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h4 class="about-highlight__title">
+                      Client-Focused Approach
+                    </h4>
+                    <p class="about-highlight__text">
+                      Tailored solutions designed around your specific business
+                      needs and objectives.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="about-highlight">
+                  <div class="about-highlight__icon">
+                    <i class="fas fa-rocket" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <h4 class="about-highlight__title">Innovation Driven</h4>
+                    <p class="about-highlight__text">
+                      Leveraging the latest technologies and methodologies to
+                      deliver cutting-edge solutions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__image" data-animate="fade-up">
+              <figure class="about__figure">
+                <img
+                  src="assets/images/about-photo.jpg"
+                  alt="Topaz Administrative Solutions - Professional business environment"
+                  class="about__photo" />
+                <img
+                  src="assets/images/tas-logomark--120.webp"
+                  alt="Topaz Administrative Solutions logo"
+                  class="about__logomark" />
+                <p class="about__tagline">Thinking. Solutions.</p>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="section contact"
+        data-animate="fade-up"
+        role="region"
+        aria-labelledby="contact-heading">
+        <div class="container">
+          <header class="contact__header">
+            <p class="contact__subtitle">Discuss your business needs</p>
+            <h2
+              id="contact-heading"
+              class="contact__title"
+              data-text="Get In Touch">
+              Get In Touch
+            </h2>
+            <p class="contact__description">
+              Ready to take your business to the next level? Contact us today
+              and let's discuss how we can help you achieve your goals.
+            </p>
+          </header>
+
+          <div class="contact__content" data-animate="fade-up">
+            <!-- Contact info -->
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-item__icon">
+                  <i class="fas fa-globe" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4 class="contact-item__title">Website</h4>
+                  <a
+                    href="https://www.topazadminsolutions.com"
+                    class="contact-item__link"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    www.topazadminsolutions.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4 class="contact-item__title">Phone</h4>
+                  <a href="tel:19724404062" class="contact-item__link"
+                    >972 440-4062</a
+                  >
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item__icon">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4 class="contact-item__title">Email</h4>
+                  <a
+                    href="mailto:info@topazadminsolutions.com"
+                    class="contact-item__link">
+                    info@topazadminsolutions.com
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact__logo">
+                <img
+                  src="assets/images/tas-logomark--120.webp"
+                  alt="Topaz Administrative Solutions logo"
+                  class="contact__logomark" />
+                <p class="contact__tagline">Thinking. Solutions.</p>
+              </div>
+            </div>
+
+            <!-- Contact form -->
+            <form
+              class="form"
+              id="contactForm"
+              novalidate
+              aria-describedby="formSuccess">
+              <div class="form__group">
+                <label for="name" class="form__label form__label--required"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form__input"
+                  placeholder="Your full name"
+                  required
+                  aria-required="true" />
+                <span class="form__error" role="alert"
+                  >Please enter your name.</span
+                >
+              </div>
+
+              <div class="form__group">
+                <label for="email" class="form__label form__label--required"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form__input"
+                  placeholder="your.email@example.com"
+                  required
+                  aria-required="true" />
+                <span class="form__error" role="alert"
+                  >Please enter a valid email address.</span
+                >
+              </div>
+
+              <div class="form__group">
+                <label for="phone" class="form__label">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form__input"
+                  placeholder="555 123-4567" />
+                <span class="form__error" role="alert"
+                  >Please enter a valid phone number.</span
+                >
+              </div>
+
+              <div class="form__group">
+                <label for="message" class="form__label form__label--required"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form__textarea"
+                  placeholder="Tell us about your project or inquiry..."
+                  required
+                  aria-required="true"></textarea>
+                <span class="form__error" role="alert"
+                  >Please enter your message.</span
+                >
+              </div>
+
+              <div class="form__actions">
+                <button type="submit" class="btn btn--primary btn--md">
+                  <span>Send Message</span>
+                  <i
+                    class="fas fa-paper-plane btn__icon"
+                    aria-hidden="true"></i>
+                </button>
+              </div>
+
+              <div
+                class="form__success"
+                id="formSuccess"
+                role="status"
+                aria-live="polite">
+                <div class="form__success-icon">
+                  <i class="fas fa-check-circle" aria-hidden="true"></i>
+                </div>
+                <h3 class="form__success-title">Message Sent!</h3>
+                <p class="form__success-message">
+                  Thank you for contacting us. We'll get back to you within 24
+                  hours.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__content">
+        <div class="footer__logo">
+          <img
+            src="assets/images/tas-logomark--120.webp"
+            alt="Topaz Administrative Solutions logo"
+            class="footer__logomark" />
+          <p class="footer__tagline">Thinking. Solutions.</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <ul class="footer__nav-list">
+            <li><a href="#home" class="footer__nav-link">Home</a></li>
+            <li><a href="#services" class="footer__nav-link">Services</a></li>
+            <li><a href="#about" class="footer__nav-link">About</a></li>
+            <li><a href="#contact" class="footer__nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <p class="footer__copyright">
+          &copy; <span id="year">2026</span>
+          Topaz Administrative Solutions. | WorldWideWebb. | All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js" defer></script>
+  </body>
+</html>

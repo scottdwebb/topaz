@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output (if added later)
+dist/
+build/
+
+# Favicons / generated assets
+assets/favicon/
+assets/video/
+
+# Image folders (binary, not text)
+assets/images/
+
+# Minified files
+*.min.js
+*.min.css
+
+# Lock files (managed by npm, don't reformat)
+package-lock.json
+
+# OS junk
+.DS_Store
+Thumbs.db

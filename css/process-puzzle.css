@@ -1,0 +1,500 @@
+/* =========================================================
+  1. ROOT VARIABLES + BREADCRUMB
+========================================================= */
+
+:root {
+  --piece1-width: 249px;
+  --piece1-height: 185px;
+  --piece2-width: 185px;
+  --piece2-height: 249px;
+  --piece3-width: 185px;
+  --piece3-height: 268px;
+  --piece4-width: 249px;
+  --piece4-height: 205px;
+  --piece5-width: 206px;
+  --piece5-height: 39px;
+  --piece6-width: 162px;
+  --piece6-height: 60px;
+  --connect-offset: 25px;
+  --animation-duration: 0.8s;
+  --animation-easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  padding-block: var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.breadcrumb__link {
+  color: var(--color-primary);
+}
+
+.breadcrumb__link:hover,
+.breadcrumb__link:focus-visible {
+  text-decoration: underline;
+}
+
+.breadcrumb__current {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.breadcrumb__separator {
+  color: var(--color-text-tertiary);
+}
+
+/* Breadcrumb inside service hero overlay */
+.service-hero .breadcrumb {
+  padding-block: 0;
+  margin-bottom: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-hero .breadcrumb__link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-hero .breadcrumb__link:hover,
+.service-hero .breadcrumb__link:focus-visible {
+  color: var(--color-accent-light);
+  text-decoration: underline;
+}
+
+.service-hero .breadcrumb__current {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-hero .breadcrumb__separator {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Keep hero title and breadcrumb responsive */
+.service-hero__inner {
+  padding: var(--space-8) var(--space-4);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .service-hero__inner {
+    padding: var(--space-12) var(--space-8);
+  }
+}
+
+/* =========================================================
+  2. SERVICE DETAIL HERO
+========================================================= */
+
+.service-hero {
+  position: relative;
+  height: 300px;
+  margin-top: var(--header-height);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .service-hero {
+    height: 400px;
+  }
+}
+
+.service-hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(26, 127, 122, 0.5) 0%, rgba(13, 87, 83, 0.9) 100%);
+  display: flex;
+  align-items: flex-end;
+}
+
+.service-hero__title {
+  color: var(--color-white);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.service-hero__inner {
+  padding: var(--space-8) var(--space-4);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .service-hero__inner {
+    padding: var(--space-12) var(--space-8);
+  }
+}
+
+/* =========================================================
+  3. SERVICE DETAIL MAIN CONTENT
+========================================================= */
+
+.service-detail {
+  padding-block: var(--space-16);
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+}
+
+.service-detail__header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.service-detail__subtitle {
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+}
+
+.service-detail__title {
+  position: relative;
+  color: var(--color-primary-light);
+  margin-bottom: var(--space-6);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail__title::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  letter-spacing: 0.05em;
+  transform: translateY(-15px);
+  z-index: 1;
+}
+
+.service-detail__description {
+  max-width: 700px;
+  margin-inline: auto;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-loose);
+}
+
+.service-detail__content {
+  margin-bottom: var(--space-16);
+}
+
+.service-detail__section {
+  margin-bottom: var(--space-16);
+}
+
+.service-detail__section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-primary-light);
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-2xl);
+}
+
+.service-detail__section-title i {
+  font-size: var(--font-size-2xl);
+}
+
+.service-detail__features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .service-detail__features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.service-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 6px 18px rgba(13, 21, 20, 0.24);
+  transition: all var(--transition-base);
+}
+
+.service-feature:hover {
+  transform: translateY(-4px);
+  border: 1px solid var(--color-primary-light);
+  box-shadow: 0 12px 24px rgba(13, 21, 20, 0.48);
+  transition: all var(--transition-base);
+}
+
+.service-feature__icon {
+  font-size: var(--font-size-xl);
+  width: 32px;
+  flex-shrink: 0;
+  color: var(--color-primary-light);
+}
+
+.service-feature__content {
+  flex: 1;
+}
+
+.service-feature__title {
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.service-feature__text {
+  color: var(--color-text-tertiary);
+  margin-bottom: 0;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+}
+
+/* =========================================================
+  4. PROCESS SECTION WITH PUZZLE ANIMATION
+========================================================= */
+
+.process-section {
+  padding-block: var(--space-16);
+  background-color: var(--color-bg-primary);
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.process-header__title {
+  position: relative;
+  color: var(--color-primary-light);
+  margin-bottom: var(--space-6);
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.process-header__title::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  letter-spacing: 0.05em;
+  transform: translateY(-15px);
+  z-index: 1;
+}
+
+.process-header__description {
+  max-width: 600px;
+  margin-inline: auto;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+}
+
+.puzzle-shell {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.puzzle-container {
+  position: relative;
+  /* Fluid width between 320 and 360 */
+  width: clamp(320px, 90vw, 360px);
+
+  /* Maintain original aspect ratio: width / height = 0.74 ⇒ height = width / 0.74 */
+  aspect-ratio: 370 / 500; /* ≈ 0.74 */
+
+  /* Cap the height at 420px */
+  max-height: 420px;
+  margin: var(--space-6) auto;
+}
+
+.puzzle-piece {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition:
+    transform var(--animation-duration) var(--animation-easing),
+    opacity var(--animation-duration) var(--animation-easing);
+  opacity: 0;
+}
+
+.puzzle-piece-content {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  background-color: var(--color-neutral-800);
+  padding: 0.125rem 0.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.puzzle-piece-label {
+  font-size: var(--font-size-xs);
+  opacity: 0.75;
+}
+
+.puzzle-piece-title {
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+}
+
+.puzzle-piece-1 {
+  background-image: url("../assets/images/puzzle/bulb--top__left.webp");
+  width: var(--piece1-width);
+  height: var(--piece1-height);
+  top: -25px;
+  left: 0;
+}
+
+.puzzle-piece-1 .puzzle-piece-content {
+  top: 50px;
+  left: 82px;
+}
+
+.puzzle-piece-2 {
+  background-image: url("../assets/images/puzzle/bulb--top__right.webp");
+  width: var(--piece2-width);
+  height: var(--piece2-height);
+  top: -25px;
+  left: 185px;
+}
+
+.puzzle-piece-2 .puzzle-piece-content {
+  top: 107px;
+  left: 75px;
+}
+
+.puzzle-piece-3 {
+  background-image: url("../assets/images/puzzle/bulb--bottom__left.webp");
+  width: var(--piece3-width);
+  height: var(--piece3-height);
+  top: 154px;
+  left: 0;
+}
+
+.puzzle-piece-3 .puzzle-piece-content {
+  top: 82px;
+  left: 30px;
+}
+
+.puzzle-piece-4 {
+  background-image: url("../assets/images/puzzle/bulb--bottom__right.webp");
+  width: var(--piece4-width);
+  height: var(--piece4-height);
+  top: 217px;
+  left: 121px;
+}
+
+.puzzle-piece-4 .puzzle-piece-content {
+  top: 85px;
+  left: 87px;
+}
+
+.puzzle-piece-5 {
+  background-image: url("../assets/images/puzzle/bulb--thread__top.webp");
+  width: var(--piece5-width);
+  height: var(--piece5-height);
+  top: 400px;
+  left: 82px;
+}
+
+.puzzle-piece-6 {
+  background-image: url("../assets/images/puzzle/bulb--thread__bottom.webp");
+  width: var(--piece6-width);
+  height: var(--piece6-height);
+  top: 440px;
+  left: 104px;
+}
+
+.visible {
+  opacity: 1 !important;
+}
+
+/* Process steps - stacked below puzzle on mobile */
+.process-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  padding-block: var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+.process-step {
+  background-color: var(--color-bg-tertiary);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 6px 18px rgba(13, 21, 20, 0.24);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  transition: all var(--transition-base);
+}
+
+.process-step:hover {
+  transform: translateY(-4px);
+  border: 1px solid var(--color-primary-light);
+  box-shadow: 0 12px 24px rgba(13, 21, 20, 0.48);
+  transition: all var(--transition-base);
+}
+
+.process-step__number {
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary-light);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  margin-bottom: 0;
+}
+
+.process-step__title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-2);
+}
+
+.process-step__description {
+  color: var(--color-text-tertiary);
+  margin-bottom: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.process-step__content {
+  flex: 1;
+}

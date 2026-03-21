@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Consulting | Topaz Administrative Solutions</title>
+    <meta
+      name="description"
+      content="Expert technology guidance and IT consulting to optimize your systems and drive digital transformation." />
+    <meta name="author" content="Scott D. Webb" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon/favicon-96x96.png"
+      sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Topaz Admin Solutions" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+    <meta
+      property="og:title"
+      content="IT Consulting | Topaz Administrative Solutions" />
+    <meta
+      property="og:description"
+      content="Technology guidance and IT consulting for small businesses." />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.topazadminsolutions.com/it-consult.html" />
+
+    <script
+      src="https://kit.fontawesome.com/7a6c4a0c2b.js"
+      crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@300;400;500;600&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/process-puzzle.css" />
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div
+      id="announcer"
+      aria-live="polite"
+      aria-atomic="true"
+      class="sr-only"></div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner" id="header">
+      <div class="container header__container">
+        <a
+          href="index.html#home"
+          class="brand"
+          aria-label="Topaz Administrative Solutions - Home">
+          <img
+            src="assets/images/tas-logomark--120.webp"
+            alt="Topaz Logo"
+            class="brand__logomark" />
+          <div class="brand__text">
+            <img
+              src="assets/images/tas-wordmark--512.png"
+              alt="Topaz Administrative Solutions"
+              class="brand__wordmark" />
+            <span class="brand__tagline">Thinking. Solutions.</span>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav__list" role="menubar">
+            <li role="none">
+              <a
+                href="index.html#home"
+                class="nav__link"
+                role="menuitem"
+                data-nav-link
+                >Home</a
+              >
+            </li>
+            <li class="nav__item nav__item--has-dropdown" role="none">
+              <button
+                class="nav__link nav__link--toggle nav__link--services-root nav__link--active"
+                type="button"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="services-menu">
+                Services
+                <i
+                  class="fas fa-chevron-down nav__chevron"
+                  aria-hidden="true"></i>
+              </button>
+              <ul
+                id="services-menu"
+                class="nav__dropdown"
+                role="menu"
+                aria-label="Services submenu">
+                <li role="none">
+                  <a
+                    href="index.html#services"
+                    class="nav__dropdown-link"
+                    role="menuitem"
+                    data-nav-link
+                    >All Services Overview</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="small-bus-plan.html"
+                    class="nav__dropdown-link"
+                    role="menuitem"
+                    data-service="business-plans"
+                    >Small Business Plans</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="it-consult.html"
+                    class="nav__dropdown-link nav__dropdown-link--active"
+                    role="menuitem"
+                    data-service="it-consulting"
+                    >IT Consulting</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="virtual-assist.html"
+                    class="nav__dropdown-link"
+                    role="menuitem"
+                    data-service="virtual-assistant"
+                    >Virtual Assistant</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li role="none">
+              <a
+                href="index.html#about"
+                class="nav__link"
+                role="menuitem"
+                data-nav-link
+                >About</a
+              >
+            </li>
+            <li role="none">
+              <a
+                href="index.html#contact"
+                class="nav__link"
+                role="menuitem"
+                data-nav-link
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div style="display: flex; align-items: center; gap: var(--space-4)">
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode">
+            <i
+              id="themeIcon"
+              class="fas fa-moon theme-toggle__icon"
+              aria-hidden="true"></i>
+          </button>
+          <button
+            id="mobileMenuToggle"
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+            <span class="mobile-menu-btn__line"></span>
+            <span class="mobile-menu-btn__line"></span>
+            <span class="mobile-menu-btn__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Off-canvas mobile menu -->
+    <aside
+      class="off-canvas-menu"
+      id="mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+      hidden>
+      <div class="off-canvas-menu__header">
+        <img
+          src="assets/images/tas-logomark--120.webp"
+          alt="Topaz Logo"
+          style="width: 48px; height: 48px" />
+        <button
+          class="off-canvas-menu__close"
+          type="button"
+          aria-label="Close mobile menu">
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+      <nav class="off-canvas-menu__nav" aria-label="Mobile main navigation">
+        <ul class="off-canvas-menu__list">
+          <li>
+            <a
+              href="index.html#home"
+              class="off-canvas-menu__link"
+              data-nav-link
+              ><i class="fas fa-home" aria-hidden="true"></i
+              ><span>Home</span></a
+            >
+          </li>
+          <li class="off-canvas-menu__item off-canvas-menu__item--has-children">
+            <button
+              class="off-canvas-menu__link off-canvas-menu__link--toggle off-canvas-menu__link--services-root"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              aria-controls="mobile-services-menu">
+              <span
+                ><i class="fas fa-briefcase" aria-hidden="true"></i
+                ><span>Services</span></span
+              >
+              <i
+                class="fas fa-chevron-down off-canvas-menu__chevron"
+                aria-hidden="true"></i>
+            </button>
+            <ul
+              id="mobile-services-menu"
+              class="off-canvas-menu__sublist"
+              role="menu"
+              aria-label="Services submenu">
+              <li role="none">
+                <a
+                  href="index.html#services"
+                  class="off-canvas-menu__sublink"
+                  role="menuitem"
+                  data-nav-link
+                  >All Services Overview</a
+                >
+              </li>
+              <li role="none">
+                <a
+                  href="small-bus-plan.html"
+                  class="off-canvas-menu__sublink"
+                  role="menuitem"
+                  data-service="business-plans"
+                  >Small Business Plans</a
+                >
+              </li>
+              <li role="none">
+                <a
+                  href="it-consult.html"
+                  class="off-canvas-menu__sublink off-canvas-menu__sublink--active"
+                  role="menuitem"
+                  data-service="it-consulting"
+                  >IT Consulting</a
+                >
+              </li>
+              <li role="none">
+                <a
+                  href="virtual-assist.html"
+                  class="off-canvas-menu__sublink"
+                  role="menuitem"
+                  data-service="virtual-assistant"
+                  >Virtual Assistant</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="index.html#about"
+              class="off-canvas-menu__link"
+              data-nav-link
+              ><i class="fas fa-info-circle" aria-hidden="true"></i
+              ><span>About</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html#contact"
+              class="off-canvas-menu__link"
+              data-nav-link
+              ><i class="fas fa-envelope" aria-hidden="true"></i
+              ><span>Contact</span></a
+            >
+          </li>
+          <li style="margin-top: auto; padding: var(--space-4)">
+            <button
+              id="themeToggleMobile"
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle dark mode"
+              style="
+                width: 100%;
+                justify-content: flex-start;
+                gap: var(--space-3);
+              ">
+              <i
+                id="themeIconMobile"
+                class="fas fa-moon theme-toggle__icon"
+                aria-hidden="true"></i>
+              <span>Toggle Theme</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="overlay" aria-hidden="true"></div>
+
+    <!-- MAIN -->
+    <main id="main-content">
+      <!-- SERVICE HERO -->
+      <section
+        class="service-hero"
+        role="region"
+        aria-label="IT Consulting hero">
+        <img
+          src="assets/images/service-hero__it.jpg"
+          alt="IT consulting and technology strategy session"
+          class="service-hero__image" />
+        <div class="service-hero__overlay">
+          <div class="service-hero__inner container">
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+              <ol class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                  <a href="index.html" class="breadcrumb__link">Home</a>
+                  <span class="breadcrumb__separator" aria-hidden="true"
+                    ><i class="fas fa-chevron-right"></i
+                  ></span>
+                </li>
+                <li class="breadcrumb__item">
+                  <a href="index.html#services" class="breadcrumb__link"
+                    >Services</a
+                  >
+                  <span class="breadcrumb__separator" aria-hidden="true"
+                    ><i class="fas fa-chevron-right"></i
+                  ></span>
+                </li>
+                <li class="breadcrumb__item" aria-current="page">
+                  <span class="breadcrumb__current">IT Consulting</span>
+                </li>
+              </ol>
+            </nav>
+            <h1 class="service-hero__title">IT Consulting</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE DETAIL -->
+      <section
+        class="service-detail"
+        data-animate="fade-up"
+        role="region"
+        aria-labelledby="service-detail-heading">
+        <div class="container">
+          <header class="service-detail__header">
+            <p class="service-detail__subtitle">Technology &amp; Systems</p>
+            <h2
+              id="service-detail-heading"
+              class="service-detail__title"
+              data-text="IT Consulting">
+              IT Consulting
+            </h2>
+            <p class="service-detail__description">
+              Technology should enable your business — not complicate it. We
+              provide practical, jargon-free guidance that connects your IT
+              environment to your goals, so your team can work faster, more
+              securely, and with greater confidence.
+            </p>
+          </header>
+
+          <div class="service-detail__content">
+            <div class="service-detail__section">
+              <h3 class="service-detail__section-title">
+                <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                Key Features
+              </h3>
+              <div class="service-detail__features" data-animate="fade-up">
+                <article class="service-feature">
+                  <div class="service-feature__icon">
+                    <i class="fas fa-map" aria-hidden="true"></i>
+                  </div>
+                  <div class="service-feature__content">
+                    <h4 class="service-feature__title">Technology Roadmap</h4>
+                    <p class="service-feature__text">
+                      A 12–24 month IT roadmap that connects infrastructure,
+                      applications, and security directly to your business
+                      objectives.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="service-feature">
+                  <div class="service-feature__icon">
+                    <i class="fas fa-cogs" aria-hidden="true"></i>
+                  </div>
+                  <div class="service-feature__content">
+                    <h4 class="service-feature__title">Systems Optimization</h4>
+                    <p class="service-feature__text">
+                      Streamlined tools and integrations so data flows cleanly
+                      and teams spend less time fighting systems.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="service-feature">
+                  <div class="service-feature__icon">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                  </div>
+                  <div class="service-feature__content">
+                    <h4 class="service-feature__title">Risk &amp; Security</h4>
+                    <p class="service-feature__text">
+                      Practical guidance to reduce risk and protect critical
+                      data without over-complicating daily work.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="service-feature">
+                  <div class="service-feature__icon">
+                    <i class="fas fa-cloud" aria-hidden="true"></i>
+                  </div>
+                  <div class="service-feature__content">
+                    <h4 class="service-feature__title">Cloud Enablement</h4>
+                    <p class="service-feature__text">
+                      Support choosing and configuring cloud services that
+                      balance cost, reliability, and user adoption.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS SECTION WITH PUZZLE -->
+      <section
+        class="process-section"
+        data-animate="fade-up"
+        role="region"
+        aria-labelledby="process-heading-it">
+        <div class="container">
+          <header class="process-header">
+            <h2
+              id="process-heading-it"
+              class="process-header__title"
+              data-text="Our Process">
+              Our Process
+            </h2>
+            <p class="process-header__description">
+              A four-step engagement that moves from discovery to continuous
+              optimization without disrupting your operations.
+            </p>
+          </header>
+
+          <div class="puzzle-shell" aria-hidden="true">
+            <div class="puzzle-container">
+              <div
+                class="puzzle-piece puzzle-piece-1"
+                data-piece="1"
+                style="transform: translateX(-200px)">
+                <div class="puzzle-piece-content">
+                  <div class="puzzle-piece-label">Step 1</div>
+                  <div class="puzzle-piece-title">Discover</div>
+                </div>
+              </div>
+              <div
+                class="puzzle-piece puzzle-piece-2"
+                data-piece="2"
+                style="transform: translateX(200px)">
+                <div class="puzzle-piece-content">
+                  <div class="puzzle-piece-label">Step 2</div>
+                  <div class="puzzle-piece-title">Design</div>
+                </div>
+              </div>
+              <div
+                class="puzzle-piece puzzle-piece-3"
+                data-piece="3"
+                style="transform: translateX(-200px)">
+                <div class="puzzle-piece-content">
+                  <div class="puzzle-piece-label">Step 3</div>
+                  <div class="puzzle-piece-title">Implement</div>
+                </div>
+              </div>
+              <div
+                class="puzzle-piece puzzle-piece-4"
+                data-piece="4"
+                style="transform: translateX(200px)">
+                <div class="puzzle-piece-content">
+                  <div class="puzzle-piece-label">Step 4</div>
+                  <div class="puzzle-piece-title">Optimize</div>
+                </div>
+              </div>
+              <div
+                class="puzzle-piece puzzle-piece-5"
+                data-piece="5"
+                style="transform: translateX(-200px)"></div>
+              <div
+                class="puzzle-piece puzzle-piece-6"
+                data-piece="6"
+                style="transform: translateX(200px)"></div>
+            </div>
+          </div>
+
+          <div class="process-steps" data-animate="fade-up">
+            <div class="process-step">
+              <div class="process-step__number" aria-hidden="true">1</div>
+              <div class="process-step__content">
+                <h3 class="process-step__title">Discover your environment</h3>
+                <p class="process-step__description">
+                  We map your current systems, pain points, and objectives with
+                  key stakeholders.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-step__number" aria-hidden="true">2</div>
+              <div class="process-step__content">
+                <h3 class="process-step__title">Design the target state</h3>
+                <p class="process-step__description">
+                  We propose a realistic technology, security, and workflow
+                  blueprint aligned with your strategy.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-step__number" aria-hidden="true">3</div>
+              <div class="process-step__content">
+                <h3 class="process-step__title">
+                  Implement prioritized changes
+                </h3>
+                <p class="process-step__description">
+                  We guide or manage implementation, focusing first on
+                  improvements with the highest impact.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="process-step__number" aria-hidden="true">4</div>
+              <div class="process-step__content">
+                <h3 class="process-step__title">Optimize and iterate</h3>
+                <p class="process-step__description">
+                  We assess results, tune configurations, and identify the next
+                  small steps that keep you moving forward.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section
+        class="section contact"
+        data-animate="fade-up"
+        role="region"
+        aria-labelledby="cta-heading-it">
+        <div class="container" style="text-align: center; max-width: 640px">
+          <p class="contact__subtitle">Ready to get started?</p>
+          <h2 id="cta-heading-it" class="contact__title">
+            Let's simplify your technology.
+          </h2>
+          <p class="contact__description">
+            Share a brief description of your IT challenges and we'll follow up
+            to schedule a conversation at your convenience.
+          </p>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              gap: var(--space-4);
+              flex-wrap: wrap;
+              margin-top: var(--space-8);
+            ">
+            <a href="index.html#contact" class="btn btn--primary btn--lg">
+              <span>Contact Us</span>
+              <i class="fas fa-arrow-right btn__icon" aria-hidden="true"></i>
+            </a>
+            <a href="index.html#services" class="btn btn--outline btn--lg">
+              <span>All Services</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+      <div class="container footer__content">
+        <div class="footer__logo">
+          <img
+            src="assets/images/tas-logomark--120.webp"
+            alt="Topaz Administrative Solutions logo"
+            class="footer__logomark" />
+          <p class="footer__tagline">Thinking. Solutions.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <ul class="footer__nav-list">
+            <li><a href="index.html#home" class="footer__nav-link">Home</a></li>
+            <li>
+              <a href="index.html#services" class="footer__nav-link"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a href="index.html#about" class="footer__nav-link">About</a>
+            </li>
+            <li>
+              <a href="index.html#contact" class="footer__nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="footer__copyright">
+          &copy; <span id="year">2026</span>
+          Topaz Administrative Solutions. | WorldWideWebb. | All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js" defer></script>
+    <script type="module" src="js/puzzle.js" defer></script>
+  </body>
+</html>
