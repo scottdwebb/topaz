@@ -445,7 +445,7 @@ h6 {
 .nav__link--toggle:hover,
 .nav__link--toggle:focus-visible,
 .nav__link--toggle.nav__link--active {
-  color: var(--color-accent-light);
+  color: var(--color-accent);
   outline: none;
 }
 
@@ -507,13 +507,13 @@ h6 {
 .nav__dropdown-link:hover,
 .nav__dropdown-link:focus-visible {
   background-color: var(--color-accent-soft);
-  color: var(--color-primary);
+  color: var(--color-primary-light);
   outline: none;
 }
 
 .nav__dropdown-link--active {
   font-weight: var(--font-weight-semibold);
-  color: var(--color-primary);
+  color: var(--color-accent-light);
 }
 
 /* Theme toggle */
